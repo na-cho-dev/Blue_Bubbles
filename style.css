@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 .container{
     max-width: 1024px;
@@ -12,18 +15,22 @@
 
 body{
     background-color: #e7ebf8;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Anek Malayalam', sans-serif;
+    /*
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Lobster', cursive; */
     overflow-x: hidden;
 }
 
 header{
-    /* background: rgba(0, 0, 0, 0.5); */
+    background: rgba(0, 0, 0, 0.35); 
     color: #003459;
     padding: 1em;
     border-bottom: 2px solid #1e90ff;
     width: 100%;
     position: fixed;
-    z-index: 999;
+    z-index: 2;
     transition: all 0.3s ease-in;
 }
 .sticky {
@@ -54,7 +61,7 @@ header{
     text-decoration: none;
     color: #fff;
 }
-.navSection nav{
+.nav{
     display: flex;
     align-items: center;
     justify-self: self-end;
@@ -73,7 +80,51 @@ nav li a{
     transition: all .1S ease-in-out;
 }
 nav li a:hover{
-    color: #1e90ff;
+    color: #ff946d;
+}
+.bars {
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+    transition: all .3s ease-in-out;
+}
+/* .bars:hover .bar{
+    margin: 3px 0;
+} */
+.bar {
+    background-color: white;
+    width: 21px;
+    height: 2px;
+    margin: 4px 0;
+    transition: all .3s ease-in-out;
+}
+.bar:nth-child(1).closeBtn{
+    transform: rotate(45deg) translate(4.5px, 4px);
+}
+.bar:nth-child(2).closeBtn{
+    display: none;
+}
+.bar:nth-child(3).closeBtn{
+    transform: rotate(-45deg);
+}
+
+
+.getQuoteNav {
+    margin: .7em 0;
+    padding: .5em 1.2em;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    background: #ff946d;
+    color: #000a2c;
+    font-size: .9em;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-family: 'Fira Sans', sans-serif;
+}
+.getQuoteNav:hover {
+    border: 2px solid #ff946d;
+    background: transparent;
+    color: white;
 }
 
 /*///////////////////////////////////////////////////*/
@@ -83,11 +134,6 @@ nav li a:hover{
 /* HOME SECTION STYLING */
 
 .home{
-    /* background: rgb(0, 10, 44);
-    background: linear-gradient(126deg, rgba(0, 10, 44, 1) 26%, rgba(9, 85, 121, 1) 63%, rgba(235, 148, 134, 1) 100%); */
-
-    /* background: rgb(0, 10, 44);
-        background: linear-gradient(229deg, rgba(0, 10, 44, 1) 46%, rgba(9, 85, 121, 1) 89%);*/
     background: url("./Images/cleaningImg2.jpg");
     background-size: cover;
     background-position: center;
@@ -100,7 +146,7 @@ nav li a:hover{
     position: absolute;
     top: 0;
     left: 0;
-    background: #00000096;
+    background: #00000062;
     height: 100%;
     width: 100%;
     z-index: -1;
@@ -110,23 +156,32 @@ nav li a:hover{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    gap: 0 20px;
+    justify-content: center;
 }
 .homeContent .leftHomeSect {
     grid-column: 1/3;
     padding: 0 1.5em;
     color: white;
     line-height: 6em;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
 }
 .leftHomeSect .homeLead{
     font-size: 2.3em;
     font-weight: bold;
     color: #ff946d;
+    line-height: 1.2em;
+    margin: .8em 0;
+}
+.leftHomeSect .homeLead .paint{
+    color: white;
 }
 .leftHomeSect .homeBody {
     line-height: 1.5em;
+    font-weight: 100;
 }
 .leftHomeSect button{
+    font-family: 'Fira Sans', sans-serif;
     cursor: pointer;
     padding: .8em;
     background: #ff946d;
@@ -150,11 +205,60 @@ nav li a:hover{
     border-radius: 3px;
 }
 
+
+
+.aside-1 {
+    background: rgb(0, 10, 44);
+    background: linear-gradient(135deg, rgba(0, 10, 44, 1) 28%, rgba(9, 85, 121, 1) 75%, rgba(255, 148, 109, 1) 100%);
+    padding: 2.5em 1.5em;
+    text-align: center;
+}
+.aside-1 h1 {
+    margin: .7em 0;
+    font-size: 2em;
+    font-family: 'Lobster', sans-serif;
+    color: white;
+}
+.aside-1 .getQuote {
+    margin: .7em 0;
+    padding: .8em 1.5em;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    background: #ff946d;
+    color: #000a2c;
+    font-size: .9em;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-family: 'Fira Sans', sans-serif;
+}
+.aside-1 .getQuote:hover {
+    border: 2px solid #ff946d;
+    background: transparent;
+    color: white;
+}
+.aside-1 .ourServiceBtn {
+    margin: .7em 0;
+    padding: .8em 1.5em;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    background: #005ebd;
+    color: white;
+    font-size: .9em;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-family: 'Fira Sans', sans-serif;
+}
+.aside-1 .ourServiceBtn:hover {
+    border: 2px solid #005ebd;
+    background: transparent;
+    color: #005ebd;
+}
+
 /*/////////////////////////////////////////////////////////////////*//*///////////////////////////ABOUT STYLING/////////////////////////*//*///////////////////////////////////////////////////////////////*/
 
 .about{
     height: fit-content;
-    padding: 2.5em ;
+    padding: 2.5em 1.5em;
 }
 .about .aboutContent{
     margin: 2.5em 0 0 0;
@@ -170,14 +274,15 @@ nav li a:hover{
     line-height: 1em;
 }
 .about .intro h2 {
-    color: #1e90ff;
+    color: #005ebd;
     padding: 0 .5em;
     margin-bottom: .5em;
 }
 .about .intro p{
-    background: #1e90ff;
+    background: #005ebd;
     padding: .5em;
     border-radius: 3px;
+    font-family: 'Fira Sans', sans-serif;
 }
 .about .leftAboutSect .ourGoal{
    margin-top: 1em;
@@ -185,7 +290,7 @@ nav li a:hover{
 .about .leftAboutSect .ourGoal :nth-child(1){
     font-weight: bold;
     font-size: larger;
-    color: #1e90ff;
+    color: #005ebd;
 }
 /* .about .rightAboutSect{
    text-align: end;
@@ -195,13 +300,111 @@ nav li a:hover{
     border-radius: 5px;
 }
 
+.aside-2 {
+    background: url(./Images/img3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2.5em 1.5em;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.aside-2::after{
+    content: "";
+    background: #00000077;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.aside-2 h1 {
+    margin: .7em 0;
+    font-size: 2em;
+    font-family: 'Lobster', sans-serif;
+    color: white;
+}
+
+.aside-2 .getQuote {
+    margin: .7em 0;
+    padding: .8em 1.5em;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    background: #ff946d;
+    color: #000a2c;
+    font-size: .9em;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.aside-2 .getQuote:hover {
+    border: 2px solid #ff946d;
+    background: transparent;
+    color: white;
+}
+
+
+.aboutContentSub{
+    padding: 2.5em 1.5em;
+}
+.aboutContentSub h2{
+    text-align: center;
+    color: #000927;
+}
+.aboutSubCard{
+    margin: 1.5em 0;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.aboutSubCard .card{
+    background: #cbcfdd;
+    box-shadow: 1px 1px 3px 2px #b1b1b1;
+    border-radius: 5px;
+    padding: 1.5em;
+    text-align: center;
+}
+.aboutContentSub .aboutSubCard .card h3{
+    text-align: center;
+    margin: .5em;
+    color: #000a2c;
+}
+.aboutContentSub .aboutSubCard .card p{
+    text-align: center;
+}
+.aboutContentSub .aboutSubCard .card i{
+    font-size: 3em;
+    margin: 0 0 10px 0;
+    color: #005ebd;
+}
+
 /*/////////////////////////////////////////////////////////////////*/
 /*///////////////////////////SERVICE STYLING//////////////////////*/
 /*///////////////////////////////////////////////////////////////*/
 .services {
     min-height: 100vh;
-    padding: 2.5em;
-    background: #000927;
+    padding: 2.5em 1.5em;
+    background: url(./Images/cleaningImg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+.services::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00000062;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 .services .intro {
     color: #fff;
@@ -218,43 +421,388 @@ nav li a:hover{
 
 .services .intro p {
     background: #ff946d;
+    color: #000927;
     padding: .5em;
     border-radius: 3px;
+    font-family: 'Fira Sans', sans-serif;
 }
 .services .serviceContent{
     color: white;
     margin: 2.5em 0 0 0;
 }
 .services .serviceContent > p{
-    text-align: start;
+    color: #fff;
 }
 .serviceContent .serviceCards{
-margin-top: 2em;
-display: grid;
-/* grid-template-columns: repeat(3, 1fr); */
-grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-gap: 1em;
+    margin-top: 2em;
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1em;
 
 }
 .serviceContent .serviceCards .card{
     background: #000927;
     border-radius: 3px;
     color: #fff;
-    box-shadow: -1px 0px 3px 0px #e7ebf8, 1px 0px 3px 0px #e7ebf8;
+    box-shadow: 1px 1px 3px 1px #494949;
     /* box-shadow: 0 5px 10px rgba(255, 255, 255, 0.05), 0 15px 40px rgba(255, 255, 255, 0.2); */
 }
 .serviceContent .serviceCards .card .cardLead{
     font-weight: bold;
     font-size: 18px;
     color: #ff946d;
+    text-align: center;
 }
 .serviceContent .serviceCards .card p{
     margin: 1em;
+    text-align: justify;
 }
 .serviceContent .serviceCards .card img{
     width: 100%;
     border-radius: 3px 3px 0 0;
 }
+
+/*////////////////////////////////////////////////////////*/
+/*//////////////////GET QUOTE STYLING/////////////////////*/
+/*////////////////////////////////////////////////////////*/
+
+.aside-3 {
+    background: rgb(0, 10, 44);
+    background: linear-gradient(333deg, rgba(0, 10, 44, 1) 28%, rgba(9, 85, 121, 1) 75%, rgba(255, 148, 109, 1) 100%);
+    padding: 2.5em 1.5em;
+    text-align: center;
+}
+.aside-3 h1 {
+    margin: .7em 0;
+    font-size: 2em;
+    font-family: 'Lobster', sans-serif;
+    color: white;
+}
+.aside-2 h1 {
+    margin: .7em 0;
+    font-size: 2em;
+    font-family: 'Lobster', sans-serif;
+    color: white;
+}
+.aside-3 .getQuote {
+    margin: .7em 0;
+    padding: .8em 1.5em;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    background: #ff946d;
+    color: #000a2c;
+    font-size: .9em;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-family: 'Fira Sans', sans-serif;
+}
+.aside-3 .getQuote:hover {
+    border: 2px solid #ff946d;
+    background: transparent;
+    color: white;
+}
+
+
+.contact{
+    height: fit-content;
+    padding: 2.5em 1.5em;
+    /* background: url(./Images/cleaningImg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; */
+    z-index: 1;
+}
+.contact .intro {
+    color: #fff;
+    width: fit-content;
+    border-radius: 3px;
+    line-height: 1em;
+}
+
+.contact .intro h2 {
+    color: #005ebd;
+    padding: 0 .5em;
+    margin-bottom: .5em;
+}
+
+.contact .intro p {
+    background: #005ebd;
+    color: #fff;
+    padding: .5em;
+    border-radius: 3px;
+    font-family: 'Fira Sans', sans-serif;
+}
+.contact .contactContent {
+    margin: 2.5em 0 0 0;
+}
+.contact .contact-1 {
+    margin: 1.5em 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+}
+.contact .contact-1 .contactLeft{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.contact .contact-1 .contactLeft h2{
+    color: #000a2c;
+    text-align: left;
+}
+.contact .contact-1 .contactLeft p {
+    color: #000a2c;
+    text-align: left;
+}
+.contact .contact-1 .contactLeft input{
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #b1b1b1;
+    background: #e7ebf8;
+    margin: 1em 0;
+    border-radius: 3px;
+    outline: none;
+}
+.contact .contact-1 .contactLeft button{
+    cursor: pointer;
+    padding: .8em;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    background: #005ebd;
+    color: #fff;
+    transition: all .2s ease-in-out;
+}
+.contact .contact-1 .contactLeft button:hover {
+    border: 2px solid #005ebd;
+    background: transparent;
+    color: #005ebd;
+}
+.contact-1 .contactRight .contactRightCont img {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    border-radius: 3px;
+}
+
+
+.aside-4 {
+    background: url(./Images/cleaningImg6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2.5em 1.5em;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.aside-4::after{
+    content: "";
+    background: #0000008e;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.aside-4 h1 {
+    margin: .7em 0;
+    font-size: 2em;
+    font-family: 'Lobster', sans-serif;
+    color: white;
+}
+.aside-4 .getQuote {
+    margin: .7em 0;
+    padding: .8em 1.5em;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    background: #ff946d;
+    color: #000a2c;
+    font-size: .9em;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-family: 'Fira Sans', sans-serif;
+}
+.aside-4 .getQuote:hover {
+    border: 2px solid #ff946d;
+    background: transparent;
+    color: white;
+}
+
+
+.contact .contact-2 {
+    margin: 1.5em 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+}
+.contact .contact-2 .contactRight {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+    /* order: 1; */
+}
+.contact .contact-2 .contactLeft {
+    /* order: 2; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.contact .contact-2 .contactRight h2 {
+    color: #000a2c;
+    text-align: left;
+}
+.contact .contact-2 .contactRight p {
+    color: #000a2c;
+    text-align: left;
+}
+.contact .contact-2 .contactRight input,
+.contact .contact-2 .contactRight textarea{
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #b1b1b1;
+    background: #e7ebf8;
+    margin: 1em 0;
+    border-radius: 3px;
+    outline: none;
+    font-family: inherit;
+    font-size: 16px;
+}
+.contact .contact-2 .contactRight button {
+    cursor: pointer;
+    padding: .8em;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    background: #005ebd;
+    color: #fff;
+    transition: all .2s ease-in-out;
+    
+}
+.contact .contact-2 .contactRight button:hover {
+    border: 2px solid #005ebd;
+    background: transparent;
+    color: #005ebd;
+}
+.contact-2 .contactLeft .contactRightCont img {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    border-radius: 3px;
+    justify-self: center;
+    align-self: center;
+}
+
+
+/*/////////////////////////////////////////////////////////////////*/
+/*///////////////////////////FOOTER STYLING//////////////////////*/
+/*///////////////////////////////////////////////////////////////*/
+footer{
+    min-height: 30vh;
+    padding: 2.5em 1.5em;
+    background-color: #00030a;
+    position: relative;
+}
+footer .footerContent{
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+    grid-template-columns: 1fr  1fr;
+    justify-content: center;
+    align-items: center;
+}
+.footerContent .footer-1{
+    align-self: flex-start;
+}
+.footerContent .footer-1 h2 .paint2{
+    color: #005ebd;
+}
+.footerContent .footer-1 p{
+    color: white;
+}
+footer .footer-2 .navLinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em 0;
+    line-height: .1em;
+}
+footer .footer-2 .navLinks li{
+    list-style-type: none;
+    font-weight: 500;
+    margin: 1.5em 1em 0 0;
+}
+footer .footer-2 .navLinks li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all .2s ease-in-out;
+}
+footer .footer-2 .navLinks li a:hover{
+    color: #005ebd;
+}
+
+.footerContent .footer-3{
+    color: white;
+    text-align: center;
+    justify-self: flex-end;
+}
+.footerContent .footer-3 .iconLinks{
+    margin-top: .5em;
+}
+.footerContent .footer- .iconLinks a{
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.footerContent .footer-3 a i:hover{
+    color: #ff946d;
+}
+.footerContent .footer-3 a i{
+    color: white;
+    margin: 0 .5em;
+}
+footer .copy{
+    text-align: center;
+    color: white;
+    margin: .5em 0;
+}
+footer .devCopy{
+    text-align: center;
+    color: white;
+    margin: 1.5em 0 0 0;
+}
+footer .devCopy a{
+    text-decoration: none;
+    color: #005ebd;
+}
+
+footer .arrowUp{
+    position: fixed;
+    right: 2em;
+    bottom: 3em;
+    opacity: 0;
+    transform: translateY(8em);
+    z-index: 9;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.arrowUp.showArrow {
+    opacity: 1;
+    transform: translateY(-3em);
+}
+footer .arrowUp i{
+    font-size: 1.8em;
+    color: #005ebd;
+    transition: all .1s ease-in-out;
+}
+footer .arrowUp i:hover{
+    color: #ff946d;
+}
+
+
 /* .leftAboutSect, .rightAboutSect{
      background: #000a2c; 
 } */

@@ -1,6 +1,7 @@
 window.onload = () => {
     window.addEventListener('scroll', () => {
         let header = document.querySelector("header");
+        let moveUp = document.querySelector('.arrowUp');
         //let scrollUpBtn = document.querySelector('.scroll-up-btn');
 
         if(this.scrollY > 30){
@@ -10,8 +11,29 @@ window.onload = () => {
             header.classList.remove("sticky");
         }
 
+
+        if(this.scrollY > 500){
+            moveUp.classList.add("showArrow");
+        }
+        else{
+            moveUp.classList.remove("showArrow");
+        }
+
     })
 }
+
+
+let burger = document.querySelector('.bars');
+let nav = document.querySelector('.nav');
+let bars = document.querySelectorAll('.bar');
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle("slideFromTop");
+    bars.forEach(bar => {
+        bar.classList.toggle("closeBtn");
+    });
+    
+})
 
 // SLIDER SCRIPT
 // const slides = Array.from(document.querySelectorAll('.slide'));

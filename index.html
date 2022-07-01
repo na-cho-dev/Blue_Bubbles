@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./Images/blue_bubbles_icon.png">
-    <link rel="stylesheet" href="./style.css">
-    <title>Blue Bubbles Limited</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300;700&family=Fira+Sans:wght@300;500&family=Kanit:wght@200;300;400&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="./Images/blue_bubbles_icon.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+    <title>Blue Bubbles Limited</title>
+  </head>
+  <body>
     <!--Home
         About Us
         Our Services
@@ -17,31 +33,53 @@
     -->
 
     <header>
-        <div class="container navSection">
-            <div class="logo">
-                <img width="80px" height="80px" src="./Images/Blue_Bubbles_1.png" alt="" srcset="">
-                <h2><a href="">Blue Bubbles</a></h2>
-            </div>
-
-            <nav>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">Contact</a></li>
-            </nav>
+      <div class="container navSection">
+        <div class="logo">
+          <img
+            width="80px"
+            height="80px"
+            src="./Images/Blue_Bubbles_1.png"
+            alt=""
+            srcset=""
+          />
+          <h2><a href="">Blue Bubbles</a></h2>
         </div>
+
+        <nav class="nav">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Service</a></li>
+          <li><a href="">Contact</a></li>
+          <li class="getQuoteNav"><a href="">Get Quote</a></li>
+        </nav>
+
+        <div class="bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        
+      </div>
     </header>
 
-    <section class="home">
-        <div class="container homeContent">
-            <div class="leftHomeSect">
-                <p class="homeLead">Headings Header</p>
-                <p class="homeBody">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia accusantium necessitatibus beatae! Cumque commodi consequuntur esse a perspiciatis suscipit possimus nobis ipsam, sunt odio voluptatem optio officiis eligendi dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam perferendis similique aliquid. Aperiam dolorem inventore distinctio, nisi ipsam maxime vero.
-                </p>
-                <button>Book A Services Now</button>
-            </div>
+    <section class="home" id="home">
+      <div class="container homeContent">
+        <div class="leftHomeSect">
+          <p class="homeLead">
+            Enjoy<span class="paint"> A Clean Atmosphere Always</span>
+          </p>
+          <p class="homeBody">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia
+            accusantium necessitatibus beatae! Cumque commodi consequuntur esse
+            a perspiciatis suscipit possimus nobis ipsam, sunt odio voluptatem
+            optio officiis eligendi dolor Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Quibusdam perferendis similique
+            aliquid. Aperiam dolorem inventore distinctio, nisi ipsam maxime
+            vero.
+          </p>
+          <button>Book A Services Now</button>
         </div>
+      </div>
     </section>
 
     <!-- <section id="homeSection" class="home">
@@ -83,99 +121,355 @@
         </div>
     </section> -->
 
-    <section class="about">
-        <div class="container">
-            <div class="intro">
-                <h2>About Us</h2>
-                <p>Who are we? Want to know more about us, be our guest.</p>
-            </div>
-
-            <div class="aboutContent">
-                <div class="leftAboutSect">
-
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt tempora voluptate nihil, voluptatem, explicabo
-                    laboriosam ratione natus officiis vel dicta enim eveniet, cum est quia consectetur neque! Modi aperiam ipsum possimus, tenetur animi consectetur distinctio at nobis voluptas dolores veritatis? Ut consequatur harum molestias in sequi soluta repellendus, quas natus.</p>
-
-                    <div class="ourGoal">
-                        <p>Our Goal</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, quos? Magni dicta repudiandae omnis nostrum modi ullam totam, earum iste atque suscipit exercitationem ratione optio ea, minus nam dolore eveniet velit, fugiat porro maxime? Doloremque ab debitis, explicabo.</p>
-                    </div>
-                </div>
-                <div class="rightAboutSect">
-                    <img src="./Images/cleaningImg6.jpg" alt="" srcset="">
-                </div>
-            </div>
-        </div>
+    <section class="aside-1">
+      <div class="container">
+        <h1>Are you ready already? Get a Quote Now.</h1>
+        <button class="ourServiceBtn">Our Services</button>
+        <button class="getQuote">Get Quote</button>
+      </div>
     </section>
 
-
-
-    <section class="services">
-        <div class="container">
-            <div class="intro">
-                <h2>Our Services</h2>
-                <p>Discover our services and enjoy a clean atmosphere.</p>
-            </div>
-
-            <div class="serviceContent">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos accusantium eum quis, magni fuga iure temporibus explicabo architecto illum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, vel.</p>
-
-               <div class="serviceCards">
-
-                <div class="card">
-                    <img src="./Images/cleaningImg9.jpg" alt="">
-                    <p class="cardLead">House Keeping/Maintenance</p>
-                    <p class="cardBody">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel rem explicabo eum amet iure nam
-                        fugiat harum voluptas vitae obcaecati.</p>
-                </div>
-
-                <div class="card">
-                    <img src="./Images/cleaningImg1.png" alt="">
-                    <p class="cardLead">Post Construction Cleaning</p>
-                    <p class="cardBody">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel rem explicabo eum amet iure nam
-                        fugiat harum voluptas vitae obcaecati.</p>
-                </div>
-
-                <div class="card">
-                    <img src="./Images/cleaningImg10.jpg" alt="">
-                    <p class="cardLead">Carpet & Upholstery Cleaning</p>
-                    <p class="cardBody">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel rem explicabo eum amet iure nam
-                        fugiat harum voluptas vitae obcaecati.</p>
-                </div>
-
-                <div class="card">
-                    <img src="./Images/cleaningImg13.jpg" alt="">
-                    <p class="cardLead">Renovation Cleaning Services</p>
-                    <p class="cardBody">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel rem explicabo eum amet iure nam
-                        fugiat harum voluptas vitae obcaecati.</p>
-                </div>
-
-                <div class="card">
-                    <img src="./Images/cleaningImg8.jpg" alt="">
-                    <p class="cardLead">Residential Cleaning</p>
-                    <p class="cardBody">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel rem explicabo eum amet iure nam
-                        fugiat harum voluptas vitae obcaecati.</p>
-                </div>
-
-                <div class="card">
-                    <img src="./Images/cleaningImg7.jpg" alt="">
-                    <p class="cardLead">Janitorial/Office Cleaning</p>
-                    <p class="cardBody">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel rem explicabo eum amet iure nam
-                        fugiat harum voluptas vitae obcaecati.</p>
-                </div>
-               </div>
-            </div>
+    <section class="about" id="about">
+      <div class="container">
+        <div class="intro">
+          <h2>About Us</h2>
+          <p>Who are we? Want to know more about us, be our guest.</p>
         </div>
+
+        <div class="aboutContent">
+          <div class="leftAboutSect">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
+              tempora voluptate nihil, voluptatem, explicabo laboriosam ratione
+              natus officiis vel dicta enim eveniet, cum est quia consectetur
+              neque! Modi aperiam ipsum possimus, tenetur animi consectetur
+              distinctio at nobis voluptas dolores veritatis? Ut consequatur
+              harum molestias in sequi soluta repellendus, quas natus.
+            </p>
+
+            <div class="ourGoal">
+              <p>Our Goal</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Dolorum, quos? Magni dicta repudiandae omnis nostrum modi ullam
+                totam, earum iste atque suscipit exercitationem ratione optio
+                ea, minus nam dolore eveniet velit, fugiat porro maxime?
+                Doloremque ab debitis, explicabo.
+              </p>
+            </div>
+          </div>
+          <div class="rightAboutSect">
+            <img src="./Images/cleaningImg6.jpg" alt="" srcset="" />
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="contact"></section>
+    <section class="aside-2">
+      <div class="container">
+        <h1>Are you ready already? Get a Quote Now.</h1>
+        <button class="getQuote">Get Quote</button>
+      </div>
+    </section>
 
-    <footer></footer>
+    <section class="aboutSub">
+      <div class="container aboutContentSub">
+        <h2>Why Choose Blue Bubbles?</h2>
+
+        <div class="aboutSubCard">
+          <div class="card">
+            <i class="fa-solid fa-rocket icon"></i>
+            <h3>Efficiency & Proficiency</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+              reprehenderit!
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-user-group"></i>
+            <h3>Real-time Assistance</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+              reprehenderit!
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-tasks"></i>
+            <!-- <i class="fa-solid fa-calendar-check"></i> -->
+            <h3>Detailed Groundwork</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+              reprehenderit!
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-comments"></i>
+            <h3>Continuous Feedback</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+              reprehenderit!
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-business-time"></i>
+            <h3>Readiness & Punctuality</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+              reprehenderit!
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-sun-plant-wilt"></i>
+            <h3>Eco-friendly Cleaning Solutions</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+              reprehenderit!
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-award"></i>
+            <h3>Professionalism & Dedication</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+              reprehenderit!
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-handshake"></i>
+            <h3>Commitment & Zeal</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+              reprehenderit!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="intro">
+          <h2>Our Services</h2>
+          <p>Discover our services and enjoy a clean atmosphere.</p>
+        </div>
+
+        <div class="serviceContent">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos
+            accusantium eum quis, magni fuga iure temporibus explicabo
+            architecto illum. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quam, vel.
+          </p>
+
+          <div class="serviceCards">
+            <div class="card">
+              <img src="./Images/cleaningImg9.jpg" alt="" />
+              <p class="cardLead">House Keeping/Maintenance</p>
+              <p class="cardBody">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+                rem explicabo eum amet iure nam fugiat harum voluptas vitae
+                obcaecati.
+              </p>
+            </div>
+
+            <div class="card">
+              <img src="./Images/cleaningImg1.png" alt="" />
+              <p class="cardLead">Post Construction Cleaning</p>
+              <p class="cardBody">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+                rem explicabo eum amet iure nam fugiat harum voluptas vitae
+                obcaecati.
+              </p>
+            </div>
+
+            <div class="card">
+              <img src="./Images/cleaningImg10.jpg" alt="" />
+              <p class="cardLead">Carpet & Upholstery Cleaning</p>
+              <p class="cardBody">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+                rem explicabo eum amet iure nam fugiat harum voluptas vitae
+                obcaecati.
+              </p>
+            </div>
+
+            <div class="card">
+              <img src="./Images/cleaningImg13.jpg" alt="" />
+              <p class="cardLead">Renovation Cleaning Services</p>
+              <p class="cardBody">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+                rem explicabo eum amet iure nam fugiat harum voluptas vitae
+                obcaecati.
+              </p>
+            </div>
+
+            <div class="card">
+              <img src="./Images/cleaningImg8.jpg" alt="" />
+              <p class="cardLead">Residential Cleaning</p>
+              <p class="cardBody">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+                rem explicabo eum amet iure nam fugiat harum voluptas vitae
+                obcaecati.
+              </p>
+            </div>
+
+            <div class="card">
+              <img src="./Images/cleaningImg7.jpg" alt="" />
+              <p class="cardLead">Janitorial/Office Cleaning</p>
+              <p class="cardBody">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+                rem explicabo eum amet iure nam fugiat harum voluptas vitae
+                obcaecati.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aside-3">
+      <div class="container">
+        <h1>Are you ready already? Get in touch with us now.</h1>
+        <button class="getQuote">Get in Touch</button>
+      </div>
+    </section>
+
+    <section class="contact" id="getQuote">
+      <div class="container">
+        <div class="intro">
+          <h2>Contact Us</h2>
+          <p>Have a Question For Us? Get in touch now.</p>
+        </div>
+
+        <div class="contactContent">
+          <p>Have a Question For Us? get in touch with us with the available forms below or you can Request a Quote from us Now. We would definitely get back to you as soon as possible. We hope to get in touch with you soon. Thank you</p>
+
+          <div class="contact-1">
+            <div class="contactRight">
+              <div class="contactRightCont">
+                <img src="./Images/img1.jpg" alt="" srcset="">
+              </div>
+            </div>
+
+
+            <div class="contactLeft">
+              <h2>Request a Quote Now</h2>
+              <p>Fill in the quote form below and we will get back to you with a quote as soon as possible.</p>
+              <form action="" method="POST">
+                <input type="text" name="name" id="" placeholder="Enter Your Name">
+                <input type="tel" name="tel" id="" placeholder="Enter Your Phone Number">
+                <input type="email" name="email" id="" placeholder="Enter Your Email">
+            
+                <button type="submit">Request Quote</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aside-4">
+      <div class="container">
+        <h1>Are you ready already? Get in touch with us now.</h1>
+        <button class="getQuote">Get in Touch</button>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
     
-</body>
-<script src="./main.js"></script>
-</html>
+        <div class="contactContent">
+          <!-- <p>Have a Question For Us? get in touch with us with the available forms below or you can Request a Quote from us
+            Now. We would definitely get back to you as soon as possible. We hope to get in touch with you soon. Thank you
+          </p> -->
 
+          <div class="contact-2">
+            <div class="contactRight">
+              <h2>Get In Touch Now</h2>
+              <p>Fill in the form below for any further enquiries and we will get back to you as soon as possible. Thank you.</p>
+              <form action="" method="POST">
+                <input type="text" name="name" id="" placeholder="Your Name goes here">
+                <input type="email" name="email" id="" placeholder="Your Email goes here">
+                <input type="text" name="subject" id="" placeholder="Your Subject goes here">
+                <textarea name="" id="" cols="30" rows="9" placeholder="Your description goes here"></textarea>
+          
+                <button type="submit">Send Message</button>
+              </form>
+            </div>
+
+
+            <div class="contactLeft">
+              <div class="contactRightCont">
+                <!-- <img src="./Images/img2.jpg" alt="" srcset="">
+                            <img src="./Images/cleaningImg2.jpg" alt="" srcset=""> -->
+                <img src="./Images/img4.jpg" alt="" srcset="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <footer>
+      <div class="container">
+
+        <div class="footerContent">
+
+          <div class="footer-1 logo">
+            <h2><a href="#home"><span class="paint2">Blue Bubbles</span> Limited</a></h2>
+            <p>Lorem ipsum dolor sit amet...</p>
+          </div>
+
+          <div class="footer-3">
+            <h3>Follow/Contact Us</h3>
+            <div class="iconLinks">
+              <a href="http://"><i class="fa-brands fa-instagram"></i></a>
+              <a href="http://"><i class="fa-brands fa-twitter"></i></a>
+              <a href="http://"><i class="fa-brands fa-facebook"></i></a>
+              <a href="http://"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="http://"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="footer-2">
+          <div class="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#getQuote">Request Quote</a></li>
+          </div>
+        </div>     
+
+        <p class="copy">Blue Bubbles Limited Copyright 2022 © All rights Reserved.</p>
+
+        <hr>
+
+        <p class="devCopy">Developed by <a href="http://nachodev.netlify.app">NachoDev</a> 2022 © All rights Reserved.</p>
+
+        
+        <div class="arrowUp">
+          <a href="#home"><i class="fa-solid fa-circle-chevron-up"></i></a>
+        </div>
+
+      </div>
+    </footer>
+
+
+
+  </body>
+  <script src="./main.js"></script>
+</html>
 
 <!-- Elisa’s Cleaning Service NY provides professional cleaning services to residents and Larchmont, Harrison, Scarsdale,
 Mamaroneck, Rye, Eastchester and areas in between. We are committed to delivering Scarsdale, New York top house cleaning
@@ -186,4 +480,9 @@ Satisfaction Guarantee.
 Residential
 Office
 Appartment Cleaning
+
+
+We offer professional services in office and home cleaning, janitorial service, upholstery cleaning, carpet/rug dry cleaning. Also, post construction cleaning, move-in and move-out cleaning, fumigation - virus disinfection, decontamination and pests control and so on. Therefore, your style is the identity of your uniqueness. In other words, our cleaning Services will put smiles on your face as we make your environment new every time. Apparently, your image's protections is our priority with our unusual professional services of treating your environment with specialty. We are a janitorial company and cleaning services provider with a difference. We top the list of cleaning companies in Lagos, Nigeria.
+
+Anybody cannot just clean and get it right. You can't afford to deploy just any body to take care of your investments and properties. In other words, we are professionals we know what to do for your peace of mind. Also, what to do in respect to cleaning services are known to us. We are a janitorial services company in Lagos with a difference.
 -->
