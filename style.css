@@ -13,6 +13,40 @@ html{
     padding: 0 1em;
 }
 
+/* ANIMATIONS */
+.anime1{
+    transition: all 2s ease-in-out;
+    transform: translateY(50px);
+    opacity: 0;
+}
+.anime1.show1{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.anime2{
+    transition: all 1s ease-in-out;
+    transform: translateX(-30px);
+    opacity: 0;
+}
+.anime2.show2{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.anime3{
+    transition: all 1s ease-in-out;
+    transform: translateX(30px);
+    opacity: 0;
+}
+.anime3.show3{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.overflow{
+    overflow-y: hidden;
+}
+
 body{
     background-color: #e7ebf8;
     font-family: 'Anek Malayalam', sans-serif;
@@ -38,6 +72,9 @@ header{
     box-shadow: 1px 0 1px 0px #0c0c0c;
     border-bottom: none; 
     padding: .8em;
+}
+.fadeUp{
+    transform: translateY(-100%);
 }
 
 .navSection{
@@ -784,7 +821,7 @@ footer .arrowUp{
     right: 2em;
     bottom: 3em;
     opacity: 0;
-    transform: translateY(8em);
+    transform: translateY(3em);
     z-index: 9;
     cursor: pointer;
     transition: all .5s ease-in-out;
