@@ -6,7 +6,9 @@
 html{
     scroll-behavior: smooth;
 }
-
+.fullSite{
+    display: none;
+}
 .container{
     max-width: 1024px;
     margin: 0 auto;
@@ -14,6 +16,33 @@ html{
 }
 
 /* ANIMATIONS */
+.loader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.loader p{
+    font-weight: bolder;
+    color: #005ebd;
+    font-family: 'Lobster', cursive;
+}
+.circle{
+    margin: 2em auto;
+    width: 40px;
+    height: 40px;
+    border: 5px solid rgba(5, 5, 5, 0.247);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
 .anime1{
     transition: all 2s ease-in-out;
     transform: translateY(50px);
@@ -224,12 +253,17 @@ nav li a:hover{
     background: #ff946d;
     border: 2px solid transparent;
     border-radius: 3px;
-    color: #000a2c;
     transition: all .2s ease-in-out;
+}
+.leftHomeSect button a{
+    text-decoration: none;
+    color: #000a2c;
 }
 .leftHomeSect button:hover{
     border: 2px solid #1e90ff;
     background: none;
+}
+.leftHomeSect button:hover a{
     color: white;
 }
 .homeContent .rightHomeSect{
@@ -268,22 +302,32 @@ nav li a:hover{
     transition: all .2s ease-in-out;
     font-family: 'Fira Sans', sans-serif;
 }
-.aside-1 .getQuote:hover {
+.aside-1 .getQuote a{
+    text-decoration: none;
+    color: #000a2c;
+}
+.aside-1 .getQuote:hover{
     border: 2px solid #ff946d;
     background: transparent;
     color: white;
 }
-.aside-1 .ourServiceBtn {
+.aside-1 .getQuote:hover a{
+    color: white;
+}
+.aside-1 .ourServiceBtn{
     margin: .7em 0;
     padding: .8em 1.5em;
     border: 2px solid transparent;
     border-radius: 3px;
     background: #005ebd;
-    color: white;
     font-size: .9em;
     cursor: pointer;
     transition: all .2s ease-in-out;
     font-family: 'Fira Sans', sans-serif;
+}
+.aside-1 .ourServiceBtn a{
+    text-decoration: none;
+    color: white;
 }
 .aside-1 .ourServiceBtn:hover {
     border: 2px solid #005ebd;
@@ -371,17 +415,21 @@ nav li a:hover{
     border: 2px solid transparent;
     border-radius: 3px;
     background: #ff946d;
-    color: #000a2c;
     font-size: .9em;
     cursor: pointer;
     transition: all .2s ease-in-out;
     font-family: 'Fira Sans', sans-serif;
 }
-
+.aside-2 .getQuote a{
+    text-decoration: none;
+    color: #000a2c;
+}
+.aside-2 .getQuote:hover a{
+    color: white;
+}
 .aside-2 .getQuote:hover {
     border: 2px solid #ff946d;
     background: transparent;
-    color: white;
 }
 
 
@@ -528,16 +576,21 @@ nav li a:hover{
     border: 2px solid transparent;
     border-radius: 3px;
     background: #ff946d;
-    color: #000a2c;
     font-size: .9em;
     cursor: pointer;
     transition: all .2s ease-in-out;
     font-family: 'Fira Sans', sans-serif;
 }
+.aside-3 .getQuote a{
+    text-decoration: none;
+    color: #000a2c;
+}
+.aside-3 .getQuote:hover a{
+    color: white;
+}
 .aside-3 .getQuote:hover {
     border: 2px solid #ff946d;
     background: transparent;
-    color: white;
 }
 
 
@@ -656,16 +709,21 @@ nav li a:hover{
     border: 2px solid transparent;
     border-radius: 3px;
     background: #ff946d;
-    color: #000a2c;
     font-size: .9em;
     cursor: pointer;
     transition: all .2s ease-in-out;
     font-family: 'Fira Sans', sans-serif;
 }
+.aside-4 .getQuote a{
+    text-decoration: none;
+    color: #000a2c;
+}
+.aside-4 .getQuote:hover a{
+    color: white;
+}
 .aside-4 .getQuote:hover {
     border: 2px solid #ff946d;
     background: transparent;
-    color: white;
 }
 
 

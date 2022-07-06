@@ -1,5 +1,11 @@
 window.onload = () => {
 
+    let site = document.querySelector(".fullSite");
+    let loader = document.querySelector(".loader");
+
+    loader.style.display = "none";
+    site.style.display = "block";
+
     let moveUp = document.querySelector('.arrowUp');
     let lastScrollTop = 0;
     let threshold = 400;
