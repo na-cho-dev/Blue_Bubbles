@@ -47,6 +47,11 @@
 }
 
 @media screen and (max-width: 720px){
+
+    .subTitle{
+        font-size: 13px;
+    }
+
     .about .aboutContent {
         grid-template-columns: 1fr;
     }
