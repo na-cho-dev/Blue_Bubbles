@@ -1,101 +1,101 @@
-window.onload = () => {
+setTimeout(() => {
   let site = document.querySelector('.fullSite');
   let loader = document.querySelector('.loader');
 
   loader.style.display = 'none';
   site.style.display = 'block';
+}, 5000);
 
-  let moveUp = document.querySelector('.arrowUp');
-  let lastScrollTop = 0;
-  let threshold = 400;
-  let header = document.querySelector('header');
+let moveUp = document.querySelector('.arrowUp');
+let lastScrollTop = 0;
+let threshold = 400;
+let header = document.querySelector('header');
 
-  window.addEventListener('scroll', () => {
-    if (this.scrollY > 30) {
-      header.classList.add('sticky');
+window.addEventListener('scroll', () => {
+  if (this.scrollY > 30) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+
+  if (this.scrollY > 400) {
+    moveUp.classList.add('showArrow');
+  } else {
+    moveUp.classList.remove('showArrow');
+  }
+
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop && scrollTop > threshold) {
+    header.classList.add('fadeUp');
+  } else {
+    header.classList.remove('fadeUp');
+  }
+  lastScrollTop = scrollTop;
+});
+
+window.addEventListener('scroll', () => {
+  const screenPosition = window.innerHeight;
+
+  const anime1 = document.querySelectorAll('.anime1');
+  anime1.forEach((anime) => {
+    position = anime.getBoundingClientRect().top;
+
+    if (screenPosition > position) {
+      anime.classList.add('show1');
     } else {
-      header.classList.remove('sticky');
+      anime.classList.remove('show1');
     }
-
-    if (this.scrollY > 400) {
-      moveUp.classList.add('showArrow');
-    } else {
-      moveUp.classList.remove('showArrow');
-    }
-
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop && scrollTop > threshold) {
-      header.classList.add('fadeUp');
-    } else {
-      header.classList.remove('fadeUp');
-    }
-    lastScrollTop = scrollTop;
   });
 
-  window.addEventListener('scroll', () => {
-    const screenPosition = window.innerHeight;
+  const anime2 = document.querySelectorAll('.anime2');
+  anime2.forEach((anime) => {
+    position = anime.getBoundingClientRect().top;
 
-    const anime1 = document.querySelectorAll('.anime1');
-    anime1.forEach((anime) => {
-      position = anime.getBoundingClientRect().top;
-
-      if (screenPosition > position) {
-        anime.classList.add('show1');
-      } else {
-        anime.classList.remove('show1');
-      }
-    });
-
-    const anime2 = document.querySelectorAll('.anime2');
-    anime2.forEach((anime) => {
-      position = anime.getBoundingClientRect().top;
-
-      if (screenPosition > position) {
-        anime.classList.add('show2');
-      } else {
-        anime.classList.remove('show2');
-      }
-    });
-
-    const anime3 = document.querySelectorAll('.anime3');
-    anime3.forEach((anime) => {
-      position = anime.getBoundingClientRect().top;
-
-      if (screenPosition > position) {
-        anime.classList.add('show3');
-      } else {
-        anime.classList.remove('show3');
-      }
-    });
+    if (screenPosition > position) {
+      anime.classList.add('show2');
+    } else {
+      anime.classList.remove('show2');
+    }
   });
 
-  let burger = document.querySelector('.bars');
-  let nav = document.querySelector('.nav');
-  let bars = document.querySelectorAll('.bar');
-  let navLinks = document.querySelectorAll('.mobileNav');
-  let body = document.body;
+  const anime3 = document.querySelectorAll('.anime3');
+  anime3.forEach((anime) => {
+    position = anime.getBoundingClientRect().top;
 
-  burger.addEventListener('click', () => {
+    if (screenPosition > position) {
+      anime.classList.add('show3');
+    } else {
+      anime.classList.remove('show3');
+    }
+  });
+});
+
+let burger = document.querySelector('.bars');
+let nav = document.querySelector('.nav');
+let bars = document.querySelectorAll('.bar');
+let navLinks = document.querySelectorAll('.mobileNav');
+let body = document.body;
+
+burger.addEventListener('click', () => {
+  nav.classList.toggle('slideFromTop');
+  bars.forEach((bar) => {
+    bar.classList.toggle('closeBtn');
+  });
+  body.classList.toggle('overflow');
+  moveUp.classList.toggle('showArrow');
+});
+
+navLinks.forEach((navLink) => {
+  navLink.addEventListener('click', () => {
     nav.classList.toggle('slideFromTop');
     bars.forEach((bar) => {
       bar.classList.toggle('closeBtn');
     });
+
     body.classList.toggle('overflow');
-    moveUp.classList.toggle('showArrow');
   });
-
-  navLinks.forEach((navLink) => {
-    navLink.addEventListener('click', () => {
-      nav.classList.toggle('slideFromTop');
-      bars.forEach((bar) => {
-        bar.classList.toggle('closeBtn');
-      });
-
-      body.classList.toggle('overflow');
-    });
-  });
-};
+});
 
 // SLIDER SCRIPT
 // const slides = Array.from(document.querySelectorAll('.slide'));
